@@ -55,11 +55,14 @@ def cal_aim_postion(postion, chessman_name, pos_from, method, pos_to):
 
     if chessman_name in rule1_list:
         if method == '平':
-            x_new =
+            x_new = pos_to_n - 1
+            y_new = y
         else:
-            pass
+            x_new = x
+            y_new = y + pos_to_n
     elif chessman_name in rule2_list:
         pass
+#       todo 写到这里了
 
 
 def _chinese_to_number(number_cn):
