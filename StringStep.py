@@ -57,7 +57,7 @@ class StringStep:
         if pos_from in ['前', '后', '中']:
             pass
         else:
-            pos_from = self.pos_from if is_red_turn else 10 - self.pos_from
+            pos_from = 10 - self.pos_from if is_red_turn else self.pos_from
             for name_str in name_dict[chessman_name]:
                 name = prefix + name_str
                 chessman = cbd.get_chessman_by_name(name)
@@ -84,8 +84,8 @@ class StringStep:
         y_new = y
         chessman_name = self.name
         method = self.method
-        pos_from = self.pos_from if is_red_turn else 10 - self.pos_from
-        pos_to = self.pos_to if is_red_turn else 10 - self.pos_to
+        pos_from = 10 - self.pos_from if is_red_turn else self.pos_from
+        pos_to = 10 - self.pos_to if is_red_turn else self.pos_to
 
         if chessman_name in rule1_list:
             if method == '平':
